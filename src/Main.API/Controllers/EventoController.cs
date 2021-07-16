@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Main.API.data;
 using Main.API.models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -11,41 +12,25 @@ namespace Main.API.Controllers
     [ApiController]
     [Route("api/[controller]")]
     public class EventoControler : ControllerBase
-    {   
-        public IEnumerable<Evento> _evento = new Evento[] { 
-                new Evento() {
-                EventoId = 1,
-                title = "js",
-                local = "Rio Branco",
-                DataEvento = DateTime.Now.AddDays(2).ToString(),
-                QtdPessoas = 55,
-                Lote = "primeiro lote",
-
-            },
-                new Evento() {
-                EventoId = 2,
-                title = "angular tutotial",
-                local = "Rio Branco",
-                DataEvento = DateTime.Now.AddDays(2).ToString(),
-                QtdPessoas = 55,
-                Lote = "primeiro lote",
-
-            }   
-        };
-        public EventoControler()
+    {
+        private readonly DataContext _context;
+        public EventoControler(DataContext context)
         {
+            _context = context;
+
         }
-        
+
         [HttpGet]
-        public IEnumerable<Evento> Get() //IEnumerable<> espera ser retornado um array
+        public IEnumerable<Eventos> Get() //IEnumerable<> espera ser retornado um array
         {
 
-            return _evento;
+            return _context.Eventos;
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<Evento> Detail(int id){
-            return  _evento.Where( evento => evento.EventoId == id );  //retorna o EventoId == ao numero passado
+        public IEnumerable<Eventos> Detail(int id)
+        {
+            return _context.Eventos.Where(evento => evento.EventoId == id);  //retorna o EventoId == ao numero passado
         }
 
         [HttpPost]
@@ -54,7 +39,7 @@ namespace Main.API.Controllers
             return "exemplo de post";
 
         }
-        
+
         [HttpPut("{id}")]
         public string Put(int id)
         {
@@ -68,15 +53,16 @@ namespace Main.API.Controllers
         }
 
         [HttpPatch("{id}")]
-        public Dictionary<string, string> PartialEditUser(int id){
-           
+        public Dictionary<string, string> PartialEditUser(int id)
+        {
+
             Dictionary<string, string> lista = new Dictionary<string, string>();
 
             lista.Add("nome", "ives");
             lista.Add("outro_nome", "pedro");
-            lista.Add("Action","Edited");
-          
-     
+            lista.Add("Action", "Edited");
+
+
 
             return lista;
         }

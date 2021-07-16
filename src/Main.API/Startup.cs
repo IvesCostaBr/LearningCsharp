@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Main.API.data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,6 +29,14 @@ namespace Main.API
         public void ConfigureServices(IServiceCollection services)
         {
 
+            //toda vez que criar um DataContext precisamos que serviço inicialize ele.
+            //e adicionada um DbContext a propriedade services.
+            //Com o retorno do tipo do nosso modelo
+            services.AddDbContext<DataContext>( 
+                context => context.UseSqlite(
+                    Configuration.GetConnectionString("Default")
+                )
+            );
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
