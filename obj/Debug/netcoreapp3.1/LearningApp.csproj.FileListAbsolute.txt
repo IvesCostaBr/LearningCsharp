@@ -1,0 +1,12 @@
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/bin/Debug/netcoreapp3.1/LearningApp.deps.json
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/bin/Debug/netcoreapp3.1/LearningApp.runtimeconfig.json
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/bin/Debug/netcoreapp3.1/LearningApp.runtimeconfig.dev.json
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/bin/Debug/netcoreapp3.1/LearningApp.dll
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/bin/Debug/netcoreapp3.1/LearningApp.pdb
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/obj/Debug/netcoreapp3.1/LearningApp.csproj.AssemblyReference.cache
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/obj/Debug/netcoreapp3.1/LearningApp.AssemblyInfoInputs.cache
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/obj/Debug/netcoreapp3.1/LearningApp.AssemblyInfo.cs
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/obj/Debug/netcoreapp3.1/LearningApp.csproj.CoreCompileInputs.cache
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/obj/Debug/netcoreapp3.1/LearningApp.dll
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/obj/Debug/netcoreapp3.1/LearningApp.pdb
+/Users/ivescosta/Documents/Projetos/LearningApp/LearningApp/obj/Debug/netcoreapp3.1/LearningApp.genruntimeconfig.cache
