@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ConsoleApp/1.0.0": {
+        "dependencies": {
+          "Game.Interface": "1.0.0",
+          "Game.Lib": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleApp.dll": {}
+        }
+      },
+      "Game.Interface/1.0.0": {
+        "runtime": {
+          "Game.Interface.dll": {}
+        }
+      },
+      "Game.Lib/1.0.0": {
+        "dependencies": {
+          "Game.Interface": "1.0.0"
+        },
+        "runtime": {
+          "Game.Lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Game.Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Game.Lib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
